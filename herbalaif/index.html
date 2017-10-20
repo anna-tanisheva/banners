@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Herbalaif</title>
+	<!-- <script>
+
+		var clickTag = "%%CLICK_URL_ESC%%%%DEST_URL%%";
+
+	</script> -->
+
+	<style>
+			@keyframes textDown {
+				0% {
+					transform: translateY(-137px);
+				}
+				100% {
+					transform: translateY(0px);
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				12.5% {
+					opacity: 0.125;
+				}
+				25% {
+					opacity: 0.25;
+				}
+				37.5% {
+					opacity: 0.375;
+				}
+				50% {
+					opacity: 0.5;
+				}
+				62.5% {
+					opacity: 0.625;
+				}
+				75% {
+					opacity: 0.75;
+				}
+				87.5% {
+					opacity: 0.875;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				12.5% {
+					opacity: 0.875;
+				}
+				25% {
+					opacity: 0.75;
+				}
+				37.5% {
+					opacity: 0.625;
+				}
+				50% {
+					opacity: 0.5;
+				}
+				62.5% {
+					opacity: 0.375;
+				}
+				75% {
+					opacity: 0.25;
+				}
+				87.5% {
+					opacity: 0.125;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes arrow1-move {
+				0% {
+					transform: translateX(-20px);
+				}
+
+				100% {
+					transform: translateX(0);
+				}
+			}
+			@keyframes arrow2-move {
+				0% {
+					transform: translateX(0);
+				}
+				20% {
+					transform: translateX(20px);
+				}
+				40% {
+					transform: translateX(10px);
+				}
+				60% {
+					transform: translateX(20px);
+				}
+				80% {
+					transform: translateX(10px);
+				}
+				100% {
+					transform: translateX(20px);
+				}
+			}
+			.fade-in {
+				animation: fadeIn 1s;
+			}
+			.fade-out {
+				animation: fadeOut 1s;
+			}
+			.fade-out-frame {
+				animation: fadeOut 0.5s;
+			}
+			.animation-text {
+				animation: textDown 2s;
+			}
+			.fade-in-thumb-up {
+				animation: fadeIn 1.5s;
+			}
+			.arrow1-move {
+				animation: arrow1-move 1s;
+			}
+			.arrow2-move {
+				animation: arrow2-move 5s;
+			}
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		div, img {
+			position: absolute;
+		}
+		.fade {
+			opacity: 0;
+		}
+		.banner {
+			box-sizing: border-box;
+			width: 1000px;
+			height: 150px;
+			overflow: hidden;
+			background-color: #fff;
+			border: 1px solid #ddd;
+		}
+		.frame-1 {
+			left: 0px;
+			top: 0px;
+			width: 1000px;
+			height: 150px;
+			background-image:url('http://uly.by/womens.ru_herbalaif/bg.jpg');
+		}
+		.logo {
+			right: 30px;
+			top: 56px;
+			width: 132px;
+			height: 39px;
+			background-image: url('http://uly.by/womens.ru_herbalaif/logo.png');
+		}
+		.text-1 {
+			left: 30px;
+			top: 48px;
+			width: 275px;
+			height: 48px;
+			background-image: url('http://uly.by/womens.ru_herbalaif/text1.png');
+    }
+		.text-2 {
+			left: 325px;
+			top: 48px;
+			width: 129px;
+			height: 51px;
+			background-image:url('http://uly.by/womens.ru_herbalaif/text2.png');
+		}
+		.thumb-up {
+			left: 519px;
+			top: 29px;
+			width: 91px;
+			height: 94px;
+			background-image: url('http://uly.by/womens.ru_herbalaif/a4.svg');
+			background-size: cover;
+		}
+		.frame-2 {
+			left: 0px;
+			top: 0px;
+			width: 1000px;
+			height: 150px;
+			background-image: url('http://uly.by/womens.ru_herbalaif/bg2.jpg');
+		}
+		.text-3 {
+			left: 30px;
+			top: 48px;
+			width: 244px;
+			height: 51px;
+			background-image:url('http://uly.by/womens.ru_herbalaif/text3.png');
+		}
+		.text-4 {
+			left: 296px;
+			top: 48px;
+			width: 202px;
+			height: 51px;
+			background-image:url('http://uly.by/womens.ru_herbalaif/text4.png')
+		}
+		.arrow1,
+		.arrow2 {
+			width: 14px;
+			height: 33px;
+			top: 58px;
+			background-image: url('http://uly.by/womens.ru_herbalaif/arrow.png');
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		.arrow1 {
+			left: 531px;
+		}
+		.arrow2 {
+			left: 531px;
+		}
+		.button {
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			width: 1000px;
+			height: 150px;
+			cursor: pointer;
+			z-index: 100;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="button" onclick="return window.open(window.clickTag, '_blank');"> -->
+	<div class="button" href="http://ad.adriver.ru/cgi-bin/click.cgi?sid=1&bt=21&ad=640406&pid=2629957&bid=5257255&bn=5257255&rnd=1990190227" target="_blank">
+		<div class="banner">
+			<div class="inner" style="background: url('http://ad.adriver.ru/cgi-bin/rle.cgi?sid=1&bt=21&ad=640406&pid=2629957&bid=5257255&bn=5257255&rnd=1990190227')" target="_blank">
+				<div class="frame-1">
+					<div class="text-1"></div>
+					<div class="text-2"></div>
+					<div class="thumb-up"></div>
+				</div>
+				<div class="frame-2">
+					<div class="text-3"></div>
+					<div class="text-4"></div>
+					<div class="arrow1 fade"></div>
+					<div class="arrow2 fade"></div>
+					<div class="thumb-up fade"></div>
+				</div>
+				<div class="logo"></div>
+
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+			'use strict';
+			var frame1 = document.querySelector('.frame-1'),
+					frame2 = document.querySelector('.frame-2'),
+					text1 = document.querySelector('.text-1'),
+					text2 = document.querySelector('.text-2'),
+					text3 = document.querySelector('.text-3'),
+					text4 = document.querySelector('.text-4'),
+					thumbUp = document.querySelector('.thumb-up'),
+					arrow1 = document.querySelector('.arrow1'),
+					arrow2 = document.querySelector('.arrow2'),
+					logo = document.querySelector('.logo');
+
+
+			setTimeout(function() {
+				frame1.classList.add('fade-in');
+				frame2.classList.add('fade');
+				logo.classList.add('fade-in');
+				text1.classList.add('fade');
+				text2.classList.add('fade');
+				text3.classList.add('fade');
+				text4.classList.add('fade');
+				thumbUp.classList.add('fade');
+			}, 0);
+
+			setTimeout(function() {
+				text1.classList.remove('fade');
+				text1.classList.add('animation-text');
+			}, 200);
+
+			setTimeout(function() {
+				text2.classList.remove('fade');
+				text2.classList.add('animation-text');
+			}, 700);
+
+			setTimeout(function() {
+				thumbUp.classList.remove('fade');
+				thumbUp.classList.add('fade-in-thumb-up');
+			}, 2000);
+
+			setTimeout(function() {
+				frame1.classList.add('fade-out');
+				frame1.classList.add('fade');
+			}, 5000);
+
+			setTimeout(function() {
+				frame2.classList.remove('fade');
+				frame2.classList.add('fade-in');
+			}, 5000);
+
+			setTimeout(function() {
+				text3.classList.remove('fade');
+				text3.classList.add('animation-text');
+			}, 5200);
+
+			setTimeout(function() {
+				text4.classList.remove('fade');
+				text4.classList.add('animation-text');
+			}, 5700);
+
+			setTimeout(function() {
+				arrow1.classList.remove('fade');
+				arrow1.classList.add('fade-in-thumb-up');
+				arrow1.classList.add('arrow1-move');
+				arrow2.classList.add('arrow1-move');
+			}, 7500);
+
+			setTimeout(function() {
+				arrow2.classList.remove('fade');
+				arrow2.classList.add('fade-in-thumb-up');
+			}, 8000);
+
+			setTimeout(function() {
+				arrow2.classList.add('arrow2-move');
+			}, 8000);
+
+			setTimeout(function() {
+				frame2.classList.add('fade-out-frame');
+				logo.classList.add('fade-out-frame');
+			}, 12500);
+
+			setTimeout(function() {
+				document.location.reload();
+			}, 13000);
+
+	</script>
+</body>
+</html>

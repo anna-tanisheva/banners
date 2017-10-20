@@ -1,0 +1,21 @@
+{
+
+    "version": "1.0",
+
+    "title": "240x400_Jaguar_F-Pace_April", 
+    "description": "",  
+
+    "width" : "240", 
+    "height": "400", 
+
+    "events": {
+        "enabled": 1, 
+        "list": { }
+    },
+
+    "clicktags": {
+        "clickTAG": "http://www.adform.com"
+    },
+
+    "source": "index.html"
+}

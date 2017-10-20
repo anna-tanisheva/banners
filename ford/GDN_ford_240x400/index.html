@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ford</title>
+<meta name="ad.size" content="width=240,height=400">
+	<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
+	<script src="logic.js" defer></script>
+
+	<style>
+		body{
+			margin: 0;
+		}
+		.main{
+			position: absolute;
+		}
+		.fade{
+			opacity: 0;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		}
+		.banner{
+			width: 240px; 	height: 400px;
+			background-color: #fff;
+			overflow: hidden;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			line-height: 16px;
+			letter-spacing: 0.3px;
+	    cursor: pointer;
+			color: #000;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+      background-image: url(img/bg.png);
+
+		}
+		.border{
+			width: 100%; 	height: 100%;
+			box-shadow: 0px 0px 0px 1px #ccc inset;
+			pointer-events: none;
+		}
+    .logo {
+      width: 73px;
+      height: 28px;
+      background-image: url(img/main-logo.png);
+      top: 30px;
+      left: 25px;
+
+    }
+    .text-1-1,
+    .text-1-2 {
+        background-image: url(img/text-1.png);
+    }
+    .text-1-1 {
+      width: 188px;
+      height: 23px;
+      top: 108px;
+      left: 25px;
+    }
+    .text-1-2 {
+      width: 165px;
+      height: 28px;
+      top: 142px;
+      left: 25px;
+      background-position: 0 28px;
+    }
+    .small-car {
+      width: 95px;
+      height: 37px;
+      top: 194px;
+      left: 25px;
+      background-image: url(img/car-small.png);
+    }
+    .kv {
+      width: 100%;
+      height: 110px;
+      top: 260px;
+      left: 0;
+      background-color: #fff;
+    }
+    .text-2-1,
+    .text-2-2,
+    .text-2-3 {
+      left: 25px;
+      background-repeat: no-repeat;
+      background-image: url(img/text-2.png);
+    }
+    .text-2-1 {
+      top: 27px;
+      width: 173px;
+      height: 17px;
+    }
+    .text-2-2 {
+      top: 48px;
+      width: 84px;
+      height: 14px;
+      background-position: 0 -21px;
+    }
+    .text-2-3 {
+      top: 70px;
+      width: 172px;
+      height: 14px;
+      background-position: 0 -43px;
+    }
+    .cta {
+       top: 39px;
+       right: 25px;
+       width: 93px;
+       height: 12px;
+       background-image: url(img/cta.png);
+    }
+    .text-3-1,
+    .text-3-2 {
+      background-image: url(img/text-3.png);
+    }
+    .text-3-1 {
+      left: 64px;
+      top: 108px;
+      width: 109px;
+      height: 24px;
+      background-position: -12px 0;
+    }
+    .text-3-2 {
+      left: 53px;
+      top: 136px;
+      width: 132px;
+      height: 12px;
+      background-position: -1px -28px;
+    }
+    .car-1 {
+      left: 6px;
+      top: 178px;
+      width: 218px;
+      height: 112px;
+      background-image: url(img/car-1.png);
+    }
+    .text-4-1 {
+      left: 78px;
+      top: 340px;
+      width: 84px;
+      height: 14px;
+      background-image: url(img/text-4.png);
+      background-position: 0 0;
+    }
+    .text-4-2 {
+      left: 78px;
+      top: 361px;
+      width: 77px;
+      height: 14px;
+      background-image: url(img/text-4.png);
+      background-position: 0px -21px;
+    }
+
+
+    .text-5-1,
+    .text-5-2 {
+      background-image: url(img/text-5.png);
+    }
+    .text-5-1 {
+      left: 64px;
+      top: 108px;
+      width: 109px;
+      height: 24px;
+      background-position: -12px 0;
+    }
+    .text-5-2 {
+      left: 53px;
+      top: 136px;
+      width: 132px;
+      height: 12px;
+      background-position: -1px -28px;
+    }
+    .car-2 {
+      left: 6px;
+      top: 178px;
+      width: 234px;
+      height: 112px;
+      background-image: url(img/car-2.png);
+    }
+    .text-6-1 {
+      left: 51px;
+      top: 340px;
+      width: 138px;
+      height: 20px;
+      background-image: url(img/text-6.png);
+      background-position: 0 0;
+    }
+    .text-6-2 {
+      left: 78px;
+      top: 361px;
+      width: 87px;
+      height: 14px;
+      background-image: url(img/text-6.png);
+      background-position: -25px -21px;
+    }
+
+    .text-7-1,
+    .text-7-2 {
+      background-image: url(img/text-7.png);
+    }
+    .text-7-1 {
+      left: 64px;
+      top: 108px;
+      width: 109px;
+      height: 24px;
+      background-position: -12px 0;
+    }
+    .text-7-2 {
+      left: 53px;
+      top: 136px;
+      width: 132px;
+      height: 12px;
+      background-position: -1px -28px;
+    }
+    .car-3 {
+      left: 6px;
+      top: 178px;
+      width: 234px;
+      height: 112px;
+      background-image: url(img/car-3.png);
+    }
+    .text-8-1 {
+      left: 45px;
+      top: 340px;
+      width: 151px;
+      height: 20px;
+      background-image: url(img/text-8.png);
+      background-position: 0 0;
+    }
+    .text-8-2 {
+      left: 70px;
+      top: 361px;
+      width: 99px;
+      height: 14px;
+      background-image: url(img/text-8.png);
+      background-position: -25px -21px;
+    }
+    .cta-big {
+      left: 25px;
+      top: 272px;
+      width: 146px;
+      height: 26px;
+      background-image: url(img/cta-big.png);
+    }
+    .main-name {
+      top: 144px;
+      left: 25px;
+      width: 194px;
+      height: 31px;
+      background-image: url(img/main-name.png);
+    }
+
+	</style>
+</head>
+<body>
+	<div class="banner main">
+    <div class="logo main"></div>
+    <div class="text-1-1 main fade"></div>
+    <div class="text-1-2 main fade"></div>
+    <div class="small-car main fade"></div>
+    <div class="kv main fade">
+      <div class="text-2-1 main fade"></div>
+      <div class="text-2-2 main fade"></div>
+      <div class="text-2-3 main fade"></div>
+    </div>
+    <div class="text-3-1 main fade"></div>
+    <div class="text-3-2 main fade"></div>
+    <div class="car-1 main fade"></div>
+    <div class="text-4-1 main fade"></div>
+    <div class="text-4-2 main fade"></div>
+
+    <div class="text-5-1 main fade"></div>
+    <div class="text-5-2 main fade"></div>
+    <div class="car-2 main fade"></div>
+    <div class="text-6-1 main fade"></div>
+    <div class="text-6-2 main fade"></div>
+
+    <div class="text-7-1 main fade"></div>
+    <div class="text-7-2 main fade"></div>
+    <div class="car-3 main fade"></div>
+    <div class="text-8-1 main fade"></div>
+    <div class="text-8-2 main fade"></div>
+    <div class="main-name main fade"></div>
+
+    <div class="cta main fade"></div>
+    <div class="cta-big main fade"></div>
+
+		<div class="border main"></div>
+
+	</div>
+</body>
+</html>

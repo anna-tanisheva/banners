@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#bannerHeader, #photo, #visa, #text-discount div, #brands div:first-child, #brands div:last-child, #text-visa-more div, #visa-img, #button, #text-legal {
+    position: absolute;
+}
+
+#bannerHeader, #photo, #visa, #brands div:first-child, #brands div:last-child, #visa-img, #button, #text-legal {
+    opacity: 0;
+}
+
+#bannerHeader, #photo, #text-discount div, #brands div, #text-visa-more div, #text-legal {
+    left: 25px;
+}
+
+#main-container {
+    width: 240px;
+    height: 400px;
+    position: relative;
+    background: url(img/back.png);
+    overflow: hidden;
+}
+
+#bannerHeader {
+    width: 180px;
+    height: 25px;
+    background: url(img/header_text.png);
+    top: 35px;
+}
+
+#effect-wrap {
+    overflow: hidden;
+}
+#photo, 
+#effect,
+#effect-two {
+    position: absolute;
+    width: 213px;
+    height: 188px;
+    top: 88px;
+    left: 27px;
+}
+#photo {
+    background: url(img/frame1_img.png);
+}
+#effect {
+    background-image: url(img/light_line.png);
+    background-position: -13px 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(0);
+}
+#effect-two {
+    background-image: url(img/light_drops.png);
+    background-repeat: repeat-x;
+    background-position: -200px 40%;
+    opacity: 0;
+}
+#visa {
+    width: 100px;
+    height: 33px;
+    background: url(img/visa.png);
+    bottom: 31px;
+    right: 32px;
+}
+
+#text-discount div:first-child {
+    width: 152px;
+    height: 27px;
+    background: url(img/text1.png);
+    top: 91px;
+    left: -220px;
+}
+
+#text-discount div:nth-child(2) {
+    width: 152px;
+    height: 27px;
+    background: url(img/text1.png) 0 110px;
+    top: 121px;
+    left: -220px;
+}
+#text-discount div:nth-child(3) {
+    width: 152px;
+    height: 27px;
+    background: url(img/text1.png) 0 81px;
+    top: 152px;
+    left: -220px;
+}
+#text-discount div:nth-child(4) {
+    width: 152px;
+    height: 27px;
+    background: url(img/text1.png) 0 53px;
+    top: 186px;
+    left: -220px;
+}
+
+#text-discount div:last-child {
+    width: 152px;
+    height: 27px;
+    background: url(img/text1.png) 0 27px;
+    top: 213px;
+    left: -220px;
+}
+
+#brands div:first-child {
+    width: 80px;
+    height: 12px;
+    background: url(img/gaint_logo.png);
+    background-repeat: no-repeat;
+    top: 348px;
+}
+#brands div:last-child {
+    width: 85px;
+    height: 36px;
+    background: url(img/pp_logo.png);
+    background-repeat: no-repeat;
+    left: 127px;
+    top: 341px;
+}
+
+#text-visa-more div:first-child {
+    width: 173px;
+    height: 28px;
+    background: url(img/text2.png) 0 0;
+    top: 90px;
+    left: -220px;
+}
+
+#text-visa-more div:nth-child(2) {
+    width: 173px;
+    height: 22px;
+    background: url(img/text2.png) 0 108px;
+    top: 122px;
+    left: -220px;
+}
+
+#text-visa-more div:nth-child(3) {
+    width: 173px;
+    height: 28px;
+    background: url(img/text2.png) 0 85px;
+    top: 148px;
+    left: -220px;
+}
+
+#text-visa-more div:nth-child(4) {
+    width: 173px;
+    height: 28px;
+    background: url(img/text2.png) 0 57px;
+    top: 174px;
+    left: -220px;
+}
+
+#text-visa-more div:last-child {
+    width: 173px;
+    height: 27px;
+    background: url(img/text2.png) 0 29px;
+    top: 206px;
+    left: -220px;
+}
+
+#visa-img {
+    width: 145px;
+    height: 90px;
+    background: url(img/card.png);
+    bottom: 30px;
+    left: 45px;
+}
+
+#button {
+    width: 137px;
+    height: 40px;
+    background: url(img/button.png);
+    bottom: 55px;
+    left: 50px;
+}
+
+#text-legal {
+    width: 185px;
+    height: 135px;
+    background: url(img/legal.png);
+    top: 88px;
+}

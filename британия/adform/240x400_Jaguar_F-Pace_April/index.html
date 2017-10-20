@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="ad.size" content="width=240,height=400">
+	<title>Jaguar Run Out</title>
+	
+	<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
+
+	<script>
+		document.write('<script src="'+ (window.API_URL || 'https://s1.adform.net/banners/scripts/rmb/Adform.DHTML.js?bv='+ Math.random()) +'"><\/script>');
+	</script>
+
+	<!-- <script src="logic.js" defer></script> -->
+	<!-- <script src="scrolling.js" defer></script>	 -->
+	<style>
+		html, body {
+			height: 100%; 	width: 100%;
+		}
+		body{
+			margin: 0;
+		}
+		.main{
+			position: absolute;
+		}
+		.fade{
+			opacity: 0;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		}
+		.banner{
+			width: 240px; 	height: 400px;
+			background-color: #000;
+			overflow: hidden;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			line-height: 16px;
+			letter-spacing: 0.3px;
+
+			color: #fff;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		.border{
+			width: 100%; 	height: 100%;
+			box-shadow: 0px 0px 0px 1px #ccc inset;
+			pointer-events: none;
+		}
+		.btn{
+			width: 100%; 	height: 100%;
+			background-color: rgba(0,0,0,0);
+		}
+		.color-area{
+			background-color: #000;
+			width: 100%;		height: 160px;
+			top: -20px;
+		}
+
+
+
+		.logo{
+			background-image: url(img/logo.jpg);
+			width: 79px;		height: 35px;
+			right: 20px;		top: 20px;
+		}
+		.care{
+			background: url(img/vector.svg) no-repeat -500px -10px;
+			width: 200px;		height: 48px;
+			left: 20px; 		top: 200px;
+		}
+		.care-text{
+			width: 300px;	height: auto;
+			left:20px; 		top: 140px;
+		}
+
+
+		.interior{
+			background-image: url(img/interior.jpg);
+			width: 563px;		height: 250px;
+			left: 0; 		bottom: 0;
+		}
+		.kv{
+			width: 1000px;		height: 400px;
+			left: -280px; 		bottom: -5px;
+		}
+		.city{
+			background-image: url(img/city.jpg);
+			width:  1000px;		height: 400px;
+			left: -80px; 		bottom:  100px;
+		}
+		.road{
+			background-image: url(img/road.png);
+			background-size: 90%;
+			width: 1094px;		height: 403px;
+			left: -180px;		top: 175px;
+		}
+		.road-overlay{
+			background-image: url(img/road.png);
+			background-size: 90%;
+			width: 1094px;		height: 403px;
+			left: -180px;		top: 175px;
+			opacity: 0.7;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.7)";
+		}
+		.rim-front{
+			background-image: url(img/rim.png);
+			width: 150px;		height: 150px;
+		}
+		.rim-front-container{
+			width: 150px;		height: 150px;
+			left: 196px; 		bottom: -11px;
+			-webkit-filter: blur(4px);
+			        filter: blur(4px);
+		}
+		.rim-front-shadow{
+			background-image: url(img/rim-shadow.png);
+			width: 61px;		height: 75px;
+			left: 250px;  		top: 95px;
+		}
+		.rim-rear{
+			background-image: url(img/rim.png);
+			width: 150px;		height: 150px;
+		}
+		.rim-rear-container{
+			width: 150px;		height: 150px;
+			left: 402px; 		bottom: 7px;
+			-webkit-filter: blur(5px);
+			        filter: blur(5px);
+		}
+		.rim-rear-shadow{
+			background-image: url(img/rim-shadow2.png);
+			width: 40px;		height: 49px;
+			left: 462px;  		top: 89px;
+		}
+		.car{
+			background-image: url(img/car.png);
+			width: 530px;		height: 204px;
+			left: 260px; 		bottom: 20px;
+		}
+		.columns-1{
+			background-image: url(img/columns-1.png);
+			width: 387px;		height: 91px;
+			left: -50px;			bottom: 75px;
+		}
+		.columns-2{
+			background-image: url(img/columns-2.png);
+			width: 219px;		height: 51px;
+			left: 730px;			bottom: 123px;
+		}
+		.fence{
+			background-image: url(img/fence.png);
+			width: 1095px;		height: 81px;
+			left: -100px; 		bottom: 95px;
+		}
+
+
+		.headline{
+			background-image: url(img/vector.svg);
+			background-position: -10px -10px;
+			width: 150px; 	height: 10px;
+			left: 20px; 	top: 90px;
+		}
+		.sl-1{
+			background: url(img/vector.svg) no-repeat -10px -40px;
+			width: 210px; 	height: 15px;
+			left: 20px; 	top: 101px;
+		}
+		.sl-2{
+			background: url(img/vector.svg) no-repeat -10px -160px;
+			width: 210px; 	height: 15px;
+			left: 20px; 	top: 115px;
+		}
+		.sl-3{
+			background: url(img/vector.svg) no-repeat -10px -180px;
+			width: 210px; 	height: 30px;
+			left: 20px; 	top: 100px;
+		}
+
+
+		.cta{
+			width: 103px; 		height: 24px;
+			left: 20px; 		top: 116px;
+			background-color: #9E1b32;
+			letter-spacing: 1px;
+			font-size: 10px;
+		}
+		.cta-triangle{
+			background: url(img/vector.svg) no-repeat -320px -52px;
+			width: 3px; 	height: 5px;
+			right: 10px; 	top: 10px;
+		}
+
+
+		.play-pause{
+			background: url(img/vector.svg) no-repeat -312px -34px;
+			width: 17px;	height: 17px;
+			left: -8px; 	top: -19px;
+		}
+		.disclaimer-text{
+			width: 195px; 	height: auto;
+			left: 30px; 	top: 0;
+			font-size: 11px;
+			line-height: 13px;
+		}
+		.scrolling{
+			width: 1px;		height: 370px;
+			left: 14px;		top: 24px;
+			background-color: rgba(255, 255, 255, .3);
+			pointer-events: none;
+		}
+		.scrolling-button{
+			background: url(img/vector.svg) no-repeat -315px -5px;
+			width: 9px;		height: 12px;
+			left: -4px;		top: 5px;
+			position: absolute;
+		}
+		.dealer{
+			width: 200px;		height: auto;
+			left: 20px; 	top: 73px;
+			font-size: 15px;
+			line-height: 19px;
+		}
+	</style>
+</head>
+
+
+
+<body>
+	<div class="banner main fade">
+		<div class="kv main ">
+			<div class="city main "></div>
+			<div class="road main "></div>
+			<div class="road-overlay main "></div>
+			<div class="columns-1 main "></div>
+			<div class="columns-2 main "></div>
+			<div class="fence main "></div>
+			<div class="car main ">
+				<div class="rim-front-container main ">
+					<div class="rim-front main "></div>
+				</div>
+				<div class="rim-rear-container main ">
+					<div class="rim-rear main "></div>
+				</div>
+				<div class="rim-front-shadow main "></div>
+				<div class="rim-rear-shadow main "></div>
+			</div>
+		</div>
+
+		<div class="interior main fade"></div>
+		<div class="color-area main fade"></div>
+
+		<div class="headline main fade"></div>
+		<div class="sl-1 main fade"></div>
+		<div class="sl-2 main fade"></div>
+		<div class="sl-3 main fade"></div>
+
+		<div class="care-text main fade">Будущее под контролем <br>с программой Jaguar Care<sup style="font-size: 10px;"><sub><b>3</b></sub></sup></div>
+		<div class="care main fade"></div>
+		<div class="cta main fade"><p style="left: 10px; top: -5px; position: absolute;">ПОДРОБНЕЕ<div class="cta-triangle main"></div></p></div>
+		<div class="logo main fade"></div>
+
+		<p class="dealer main fade"><b>Атлант-М Британия</b> <br>ул. Аэродромная 125А <br>+375 (17) 335 33 33</p>
+
+		<div class="disclaimer-text main fade">
+			<p>
+			1. Предложение действует с 1 по 30 апреля 2017 года. Стоимость указана для нового Jaguar F-Pace в комплектации Pure (Чистый) с дизельным двигателем i 4D 2.0 л и включает скидку 7% при сдаче в зачет автомобиля любой марки не старше 7 лет. Предложение ограничено. Подробная информация на сайте landrover-atlantm.by, а также у менеджеров по продукту в автоцентре «Атлант – М Британия». Вся информация носит справочный характер и не является публичной офертой.
+
+				<br><br>
+			2. Для юридических лиц.
+				СООО "Райффайзен-лизинг". Процентные ставки для Jaguar - 11, 5% (USD, EUR), 18% (BYN). Срок лизинга: 12-48 месяцев. Первоначальный взнос: 20-40%. Полное АвтоКАСКО - 2,67% в год. Погашение лизинговых платежей в BYN по курсу НБРБ +1% на дату платежа. Возможен досрочный выкуп не ранее 1 года. До момента окончания договора автомобиль остается в собственности СООО "Райффайзен-Лизинг".
+				СООО "Ресо-БелЛизинг". Процентные ставки для Jaguar: 17,5% (RUB), 13,5% (USD, EUR). Срок лизинга: 12-60 месяцев. Первоначальный взнос: 10-40% (при сроке лизинга до 18 мес.), 20-40% при сроке лизинга свыше 18 мес. (возможна рассрочка уплаты аванса). Полное АвтоКАСКО от 3.4% в год. Валюта договора: USD. Погашение лизинговых платежей в BYN по курсу НБРБ на дату платежа. Возможен досрочный выкуп не ранее 1 года. До момента окончания договора автомобиль остается в собственности СООО "Ресо-Беллизинг".
+				ЗАО "МТБанк": процентная ставка на первые 12 мес.договора для новых клиентов ЗАО "МТБанк" - 9,9% (USD, EUR). Первоначальный взнос от 20%, срок договора от 12 до 36 мес. (новые автомобили), от 12 до 18 мес. (автомобили с пробегом). Сумма финансирования от 30 000 USD. Погашение лизинговых платежей в BYN по курсу НБРБ на дату платежа.
+
+				Для физических лиц.
+				СООО "Райффайзен-лизинг". Процентная ставка - 11,5%. Срок лизинга: 12-48 месяцев. Первоначальный взнос: 20-40%. Полное АвтоКАСКО - 3,58% в год. Валюта договора: USD, EUR. Погашение лизинговых платежей в BYN по курсу НБРБ +1% на дату платежа. Возможен досрочный выкуп не ранее 1 года. До момента окончания договора автомобиль остается в собственности СООО "Райффайзен-Лизинг".
+
+			</p>
+		</div>
+
+		<a id="clickLayer" href=""><div class="btn main"></div></a>
+
+		<div class="scrolling main fade">
+			<div class="play-pause main"></div>
+			<div class="scrolling-button main"></div>
+		</div>
+		<div class="border main"></div>
+	</div>
+	
+	<script>
+    	var clickArea = document.getElementById('clickLayer');
+
+    	clickTAGvalue = dhtml.getVar('clickTAG', 'http://www.adform.com'); 
+   		landingpagetarget = dhtml.getVar('landingPageTarget', '_blank');
+
+    	clickArea.onclick = function() {
+        	window.open(clickTAGvalue, landingpagetarget);
+    }
+	</script>
+	<script>
+		// анимация
+		"use strict";function restartAnimation(){TweenMax.killAll(),tl=new TimelineLite,startAnimation(),TweenMax.to([columns1,columns2,city,road,kv,interior],0,{x:0,y:0,scale:1}),TweenMax.to(colorArea,0,{x:0,y:0,opacity:0}),tween.restart(),kvAnimation()}function startAnimation(){tl.to(kv,1,{opacity:1},0).to(kv,0,{scale:1},0).to(city,7,{x:220},0).to(city,7,{scale:1.8,y:-135},0).to(kv,4,{scale:.52,x:-125,y:50},0).to(colorArea,.3,{opacity:1,ease:Power0.easeNone},.5).to(colorArea,.6,{y:20},.5).to(logo,1,{opacity:1,ease:Power0.easeNone},.75).to(headline,1,{opacity:1,ease:Power0.easeNone},1).to(sl1,2,{opacity:1,ease:Power0.easeNone},1).to(sl2,2,{opacity:1,ease:Power0.easeNone},1.25).to(interior,5,{x:-350,ease:Power0.easeNone},4).to(interior,.25,{opacity:1,ease:Power0.easeNone},4).to([sl1,sl2],.5,{opacity:0,ease:Power0.easeNone},4).to(sl3,.5,{opacity:1,ease:Power0.easeNone},4.75).to([sl3,interior,headline],.25,{opacity:0,ease:Power0.easeNone},8).to(kv,0,{opacity:0},8).to([kv,headline],.5,{opacity:1,ease:Power0.easeNone},8.25).to(cta,1,{opacity:1,ease:Power0.easeNone},9).to([headline,cta],.25,{opacity:0,ease:Power0.easeNone},12.5).to(dealer,1,{opacity:1,onStart:scrollingOn},12.75).to([dealer,kv,logo],.25,{opacity:0,onStart:scrollingOn},15.75).to([disclaimer,scrolling],1,{opacity:1,onStart:scrollingOn},16).add("endBanner",19.5).to([disclaimer,scrolling],.25,{opacity:0,onStart:scrollingOff,onComplete:restartAnimation},19.55)}function kvAnimation(){function a(){TweenMax.to(columns1,0,{x:0,y:0,scale:1})}TweenMax.to(rimFrontContainer,0,{scaleX:.35,scaleY:.46}),TweenMax.to(rimRearContainer,0,{scaleX:.23,scaleY:.38}),tween=TweenMax.to([rimFront,rimRear],1,{rotation:-359,repeat:-1,ease:Power0.easeNone}),TweenMax.to(road,.1,{x:100,y:-11,scale:.95,repeat:-1,ease:Power0.easeNone}),TweenMax.to(columns1,.3,{x:161,y:-7,scale:.84,repeat:-1,onComplete:a,ease:Power0.easeNone}),TweenMax.to(columns2,.2,{x:44,y:-2,scale:.9,repeat:-1,onComplete:a,ease:Power0.easeNone})}function scrollingOn(){scrolling.style.pointerEvents="auto",scrollingButton.style.top=0,disclaimer.style.top=0}function scrollingOff(){scrolling.style.pointerEvents="none"}function playPauseClick(){playFlag?(tl.pause(),playFlag=!1,playPause.style.backgroundPosition="-312px -17px"):(restartAnimation(),tl.seek("endBanner"),playFlag=!0,playPause.style.backgroundPosition="-312px -34px")}function bannerRollOver(){function a(){TweenMax.to(ctaArrow,0,{x:-10}),TweenMax.to(ctaArrow,.3,{opacity:1,x:0,ease:Power1.easeOut})}TweenMax.to(ctaArrow,0,{opacity:1,x:0}),TweenMax.to(ctaArrow,.2,{opacity:0,x:10,ease:Power1.easeIn,onComplete:a})}function init(){banner.style.opacity=1,playPause.addEventListener("click",playPauseClick),btn.addEventListener("mouseover",bannerRollOver),scrollingButton.addEventListener("mousedown",sliderButtonMouseDown),document.addEventListener("mouseup",sliderButtonMouseUp),kvAnimation(),startAnimation()}var banner=document.querySelector(".banner"),btn=document.querySelector(".btn"),colorArea=document.querySelector(".color-area"),logo=document.querySelector(".logo"),playPause=document.querySelector(".play-pause"),playFlag=!0,cta=document.querySelector(".cta"),ctaArrow=document.querySelector(".cta-triangle"),disclaimer=document.querySelector(".disclaimer-text"),scrolling=document.querySelector(".scrolling"),scrollingButton=document.querySelector(".scrolling-button"),interior=document.querySelector(".interior"),kv=document.querySelector(".kv"),city=document.querySelector(".city"),road=document.querySelector(".road"),columns1=document.querySelector(".columns-1"),columns2=document.querySelector(".columns-2"),fence=document.querySelector(".fence"),car=document.querySelector(".car"),rimFront=document.querySelector(".rim-front"),rimFrontContainer=document.querySelector(".rim-front-container"),rimRear=document.querySelector(".rim-rear"),rimRearContainer=document.querySelector(".rim-rear-container"),headline=document.querySelector(".headline"),sl1=document.querySelector(".sl-1"),sl2=document.querySelector(".sl-2"),sl3=document.querySelector(".sl-3"),careText=document.querySelector(".care-text"),care=document.querySelector(".care"),dealer=document.querySelector(".dealer"),tween,tl=new TimelineLite;window.addEventListener("load",init);
+
+			// скроллинг
+
+			function sliderButtonMouseDown(){scrollingFlag=!0,document.addEventListener("mousemove",startDrag)}function sliderButtonMouseUp(){scrollingFlag&&(scrollingFlag=!1,document.removeEventListener("mousemove",startDrag))}function startDrag(a){positionYScrollingButtnon=a.pageY-26,percentScrollingButtonTop=Math.floor(100*positionYScrollingButtnon/scrolling.offsetHeight),percentScrollingButtonTop<=0&&(scrollingFlag=!1,document.removeEventListener("mousemove",startDrag),percentScrollingButtonTop=0),percentScrollingButtonTop>=100&&(scrollingFlag=!1,document.removeEventListener("mousemove",startDrag),percentScrollingButtonTop=100),disclaimer.style.top=-(percentScrollingButtonTop*disclaimer.scrollHeight/100-positionYScrollingButtnon)+"px",positionYScrollingButtnon>=banner.offsetHeight-50?scrollingButton.style.top=banner.offsetHeight-50+"px":scrollingButton.style.top=positionYScrollingButtnon<=0?"0px":positionYScrollingButtnon+"px"}function preventSelection(a){function c(a,b,c){a.attachEvent?a.attachEvent("on"+b,c):a.addEventListener&&a.addEventListener(b,c,!1)}function d(){window.getSelection?window.getSelection().removeAllRanges():document.selection&&document.selection.clear&&document.selection.clear()}function e(a){var a=a||window.event;if(!(a.target||a.srcElement).tagName.match(/INPUT|TEXTAREA/i)){var c=a.keyCode||a.which;a.ctrlKey&&c=="A".charCodeAt(0)&&(d(),a.preventDefault?a.preventDefault():a.returnValue=!1)}}var b=!1;c(a,"mousemove",function(){b&&d()}),c(a,"mousedown",function(a){var a=a||window.event,c=a.target||a.srcElement;b=!c.tagName.match(/INPUT|TEXTAREA/i)}),c(a,"mouseup",function(){b&&d(),b=!1}),c(a,"keydown",e),c(a,"keyup",e)}var scrollingFlag,positionYScrollingButtnon,percentScrollingButtonTop;scrollingButton.addEventListener("mousedown",sliderButtonMouseDown),document.addEventListener("mouseup",sliderButtonMouseUp),preventSelection(document);
+	</script>
+</body>
+
+
+
+</html>

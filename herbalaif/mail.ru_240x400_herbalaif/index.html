@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="ad.size" content="width=240,height=400">
+	<title>Herbalaif</title>
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		div, img {
+			position: absolute;
+		}
+		.fade {
+			opacity: 0;
+		}
+		.banner {
+			box-sizing: border-box;
+			width: 240px;
+			height: 400px;
+			overflow: hidden;
+			background-color: #fff;
+			border: 1px solid #ddd;
+		}
+		.frame-1 {
+			left: 0px;
+			top: 0px;
+			width: 240px;
+			height: 400px;
+			background-image: url(img/bg.jpg);
+		}
+		.logo {
+			left: 20px;
+			bottom: 20px;
+			width: 84px;
+			height: 25px;
+			background-image: url(img/logo.png);
+		}
+		.text-1 {
+			left: 20px;
+			top: 20px;
+			width: 162px;
+			height: 28px;
+			background-image: url(img/text1.png);
+		}
+		.text-2 {
+			left: 20px;
+			top: 55px;
+			width: 76px;
+			height: 30px;
+			background-image: url(img/text2.png);
+		}
+		.thumb-up {
+			right: 20px;
+			top: 76px;
+			width: 58px;
+			height: 59px;
+			background-image: url(img/a4.svg);
+			background-size: cover;
+		}
+
+		.frame-2 {
+			left: 0px;
+			top: 0px;
+			width: 240px;
+			height: 400px;
+			background-image: url(img/bg2.jpg);
+		}
+
+		.text-3 {
+			left: 20px;
+			top: 20px;
+			width: 144px;
+			height: 31px;
+			background-image: url(img/text3.png);
+		}
+		.text-4 {
+			left: 20px;
+			top: 55px;
+			width: 115px;
+			height: 28px;
+			background-image: url(img/text4.png);
+		}
+		.arrow1,
+		.arrow2 {
+			width: 9px;
+			height: 20px;
+			top: 59px;
+			background-image: url(img/arrow.svg);
+		}
+		.arrow1 {
+			left: 143px;
+		}
+		.arrow2 {
+			left: 150px;
+		}
+		.link {
+		  width: 240px;
+		  height: 400px;
+		  position: absolute;
+		  z-index: 999;
+		  top: 0;
+		  left: 0;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div id="banner" class="banner">
+
+		<div id="frame-1" class="frame-1 fade">
+			<div id="text-1" class="text-1 fade"></div>
+			<div id="text-2" class="text-2 fade"></div>
+			<div class="thumb-up fade"></div>
+		</div>
+		<div id="frame-2" class="frame-2 fade">
+			<div id="text-3" class="text-3 fade"></div>
+			<div id="text-4" class="text-4 fade"></div>
+			<div id="arrow1" class="arrow1 fade"></div>
+			<div id="arrow2" class="arrow2 fade"></div>
+			<div class="thumb-up fade"></div>
+		</div>
+		<div id="logo" class="logo fade"></div>
+		<a  class="link" href="%link1%" target="_blank"></a>
+	</div>
+
+	  <script src="TweenMax.min.js" charset="utf-8"></script>
+
+  <script src="logic.js" charset="utf-8"></script>
+</body>
+</html>
