@@ -1,0 +1,83 @@
+body {
+  background-color: #eee;
+}
+table {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  background-color: #fff;
+}
+td {
+  width: 50%;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  text-align: center;
+  height: 80px;
+}
+a {
+  display: block;
+  text-align: center;
+}
+iframe {
+  display: block;
+  height: 0;
+  margin: 0 auto;
+  transition: 0.5s;
+  border: none;
+}
+.btn {
+  display: block;
+  width: 121.734px;
+  margin: 10px auto;
+}
+.ford-frame {
+  height: 400px;
+}
+.setHeightBannerAtlant1 {
+  height: 250px;
+  transition: 0.5s;
+}
+.setHeightBannerAtlant2 {
+  height: 300px;
+  transition: 0.5s;
+}
+.setHeightBannerHerbalaif1 {
+  height: 400px;
+  transition: 0.5s;
+}
+.setHeightBannerHerbalaif2 {
+  height: 150px;
+  transition: 0.5s;
+}
+.setHeightBannerSamsung1 {
+  height: 200px;
+  transition: 0.5s;
+}
+.setHeightBannerSamsung2 {
+  height: 400px;
+  transition: 0.5s;
+}
+.wrapper {
+  display: inline-block;
+  font-size: 0;
+  width: 24%;
+}
+.back {
+  position: absolute;
+  display: block;
+  top: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.setHeightBannerVisa {
+  height: 400px;
+  transition: 0.5s;
+}
+
+/*@media only screen and (max-width: 991px) {
+  table {
+    width: 90%;
+  }
+}*/

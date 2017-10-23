@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <title>Banners for herbalaif</title>
+</head>
+<body>
+  <a href="#" class="btn btn-primary show-banner-1">Show Banner 1</a>
+  <iframe src="mail.ru_240x400_herbalaif/index.html" width="240" height="400" class="banner1"></iframe>
+  <a href="#" class="btn btn-primary show-banner-2">Show Banner 2</a>
+  <iframe src="womens.ru/index.html" width="1000" height="150" class="banner2"></iframe>
+
+  <a href="../index.html" class="btn btn-success">Go Back!</a>
+
+  <script>
+
+    // show-hide banners handler;
+    var banner1 = document.querySelector('.banner1');
+    var banner2 = document.querySelector('.banner2');
+    document.addEventListener('click', function (evt) {
+      if (evt.target.classList.contains('show-banner-1')) {
+        if (!banner1.classList.contains('setHeightBannerHerbalaif1')) {
+          banner1.contentWindow.document.location.reload();
+          banner1.classList.add('setHeightBannerHerbalaif1');
+        } else {
+          banner1.classList.remove('setHeightBannerHerbalaif1');
+        }
+      } else if (evt.target.classList.contains('show-banner-2')) {
+        if (!banner2.classList.contains('setHeightBannerHerbalaif2')) {
+          banner2.contentWindow.document.location.reload();
+          banner2.classList.add('setHeightBannerHerbalaif2');
+        } else {
+          banner2.classList.remove('setHeightBannerHerbalaif2');
+        }
+      }
+    })
+
+  </script>
+</body>
+</html>

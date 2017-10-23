@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <title>Banners for visa</title>
+</head>
+<body>
+  <div class="wrapper">
+    <a href="#" class="btn btn-primary btn-visa show-banner-1">Show Banner 1</a>
+    <iframe src="visa-240-x-400-premium-electronics/index.html" width="240" height="400" class="banner1"></iframe>
+  </div>
+  <div class="wrapper">
+    <a href="#" class="btn btn-primary btn-visa show-banner-2">Show Banner 2</a>
+    <iframe src="visa-240-x-400-premium-kids/index.html" width="240" height="400" class="banner2"></iframe>
+  </div>
+  <div class="wrapper">
+    <a href="#" class="btn btn-primary btn-visa show-banner-3">Show Banner 3</a>
+    <iframe src="visa-240-x-400-premium-perfumery/index.html" width="240" height="400" class="banner3"></iframe>
+  </div>
+  <div class="wrapper">
+    <a href="#" class="btn btn-primary btn-visa show-banner-4">Show Banner 4</a>
+    <iframe src="visa-240-x-400-premium-shopping/index.html" width="240" height="400" class="banner4"></iframe>
+  </div>
+
+  <a href="../index.html" class="btn btn-success back">Go Back!</a>
+
+  <script>
+
+    // show-hide banners handler;
+    var buttons = document.querySelectorAll('.btn');
+    document.addEventListener('click', function (evt) {
+      for (var i = 0; i <= buttons.length; i++) {
+        if (evt.target.classList.contains('show-banner-' + i)) {
+          var banner = document.querySelector('.banner' + i)
+          if (!banner.classList.contains('setHeightBannerVisa')) {
+            banner.contentWindow.document.location.reload();
+            banner.classList.add('setHeightBannerVisa');
+          } else {
+            banner.classList.remove('setHeightBannerVisa');
+          }
+        }
+      }
+    })
+
+  </script>
+</body>
+</html>

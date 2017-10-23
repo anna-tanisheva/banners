@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="ad.size" content="width=100%,height=250">
 	<title>Discovery</title>
-	
+
 	<script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
 	<style>
 		html, body {
@@ -12,6 +12,7 @@
 		}
 		body{
 			margin: 0;
+			overflow: hidden;
 		}
 		.main{
 			position: absolute;
@@ -81,7 +82,7 @@
 			top: 0;
 			right: 0;
 		}
-		
+
 		.kv2{
 			background-image: url(img/kv2.jpg);
 			background-position: right;
@@ -120,7 +121,7 @@
 			background-position: -3px -79px;
 			width: 197px;
 			height: 38px;
-			left: 22px; 	
+			left: 22px;
 			top: 102px;
 		}
 		.text2{
@@ -160,7 +161,7 @@
 		}
 		.care{
 			background-image: url(img/vector.png);
-			background-position: -319px -53px;	
+			background-position: -319px -53px;
 			width: 6px;		height: 6px;
 			left: 20px; 	top: 180px;
 		}
@@ -172,7 +173,7 @@
 		}
 		.cta-triangle{
 			background-image: url(img/vector.png);
-			background-position: -319px -53px;			
+			background-position: -319px -53px;
 			width: 6px; 	height: 7px;
 			left: 0px; 	top: 12.2px;
 		}
@@ -181,7 +182,7 @@
 			font-size: 18px;
 			line-height: 19px;
 		}
-		
+
 	</style>
 </head>
 <body>
@@ -222,7 +223,7 @@
 			window.open("./ext_click/?redirect_uri="+encodeURIComponent("http://landrover-atlantm.by/new-cars/all-new-discovery/view/"), "_blank");
 		}
 	</script> -->
-		
+
 
 </div>
 
@@ -244,7 +245,7 @@
 		text3 = document.querySelector('.text3'),
 		text4 = document.querySelector('.text4'),
 		discovery = document.querySelector('.discovery'),
-		
+
 		ctaArrow = document.querySelector('.cta-triangle'),
 		cta = document.querySelector('.cta'),
 		disclaimer = document.querySelector('.disclaimer-text'),
@@ -272,7 +273,7 @@
 		.fromTo(kv4, 4, {scale:1, y: 0, ease:Power1.easeInOut}, {scale:1.5, y: -20, ease:Power1.easeInOut}, 10)
 		.to([discovery], 1, {opacity:1}, 10.1)
 		.to(text4, 1, {opacity:1}, 10.5)
-		
+
 		.to([cta, disclaimer], 1, {opacity:1}, 10.9)
 		.to([cta, text4, discovery], 1, {opacity:0}, 14)
 		.to(dealer, 1, {opacity:1}, 14.25)
@@ -310,9 +311,3 @@
 
 
 </html>
-
-
-
-
-
-

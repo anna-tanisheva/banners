@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 #bannerHeader, #photo, #visa, #text-discount div, #brands div:first-child, #text-visa-more div, #visa-img, #button, #text-legal {
@@ -33,7 +34,7 @@ body {
 #effect-wrap {
     overflow: hidden;
 }
-#photo, 
+#photo,
 #effect-wrap {
     position: absolute;
     width: 213px;
