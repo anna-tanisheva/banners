@@ -25,14 +25,18 @@
       if (evt.target.classList.contains('show-banner-1')) {
         if (!banner1.classList.contains('setHeightBannerSamsung1')) {
           banner1.contentWindow.document.location.reload();
-          banner1.classList.add('setHeightBannerSamsung1');
+          setTimeout(function () {
+            banner1.classList.add('setHeightBannerSamsung1');
+          }, 500)
         } else {
           banner1.classList.remove('setHeightBannerSamsung1');
         }
       } else if (evt.target.classList.contains('show-banner-2')) {
         if (!banner2.classList.contains('setHeightBannerSamsung2')) {
           banner2.contentWindow.document.location.reload();
-          banner2.classList.add('setHeightBannerSamsung2');
+          setTimeout(function () {
+            banner2.classList.add('setHeightBannerSamsung2');
+          }, 500)
         } else {
           banner2.classList.remove('setHeightBannerSamsung2');
         }

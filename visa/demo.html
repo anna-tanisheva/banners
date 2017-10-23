@@ -38,7 +38,9 @@
           var banner = document.querySelector('.banner' + i)
           if (!banner.classList.contains('setHeightBannerVisa')) {
             banner.contentWindow.document.location.reload();
-            banner.classList.add('setHeightBannerVisa');
+            setTimeout(function () {
+              banner.classList.add('setHeightBannerVisa');
+            }, 500)
           } else {
             banner.classList.remove('setHeightBannerVisa');
           }
