@@ -5,9 +5,7 @@ table {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   width: 90%;
   background-color: #fff;
 }
@@ -26,8 +24,6 @@ iframe {
   display: block;
   height: 0;
   margin: 0 auto;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
   border: none;
 }
@@ -41,38 +37,26 @@ iframe {
 }
 .setHeightBannerAtlant1 {
   height: 250px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
 }
 .setHeightBannerAtlant2 {
   height: 300px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
 }
 .setHeightBannerHerbalaif1 {
   height: 400px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
 }
 .setHeightBannerHerbalaif2 {
   height: 150px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
 }
 .setHeightBannerSamsung1 {
   height: 200px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
 }
 .setHeightBannerSamsung2 {
   height: 400px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
 }
 .wrapper {
@@ -85,14 +69,10 @@ iframe {
   display: block;
   top: 500px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .setHeightBannerVisa {
   height: 400px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
 }
 

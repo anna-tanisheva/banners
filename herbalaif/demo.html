@@ -25,18 +25,14 @@
       if (evt.target.classList.contains('show-banner-1')) {
         if (!banner1.classList.contains('setHeightBannerHerbalaif1')) {
           banner1.contentWindow.document.location.reload();
-          setTimeout(function () {
-            banner1.classList.add('setHeightBannerHerbalaif1');
-          }, 500)
+          banner1.classList.add('setHeightBannerHerbalaif1');
         } else {
           banner1.classList.remove('setHeightBannerHerbalaif1');
         }
       } else if (evt.target.classList.contains('show-banner-2')) {
         if (!banner2.classList.contains('setHeightBannerHerbalaif2')) {
           banner2.contentWindow.document.location.reload();
-          setTimeout(function () {
-            banner2.classList.add('setHeightBannerHerbalaif2');
-          }, 500)
+          banner2.classList.add('setHeightBannerHerbalaif2');
         } else {
           banner2.classList.remove('setHeightBannerHerbalaif2');
         }
