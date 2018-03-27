@@ -79,6 +79,15 @@ iframe {
   height: 400px;
   transition: 0.5s;
 }
+.stub-container {
+  height: 100px;
+  line-height: 100px;
+}
+.stub-container p {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 
 /*@media only screen and (max-width: 991px) {
   table {

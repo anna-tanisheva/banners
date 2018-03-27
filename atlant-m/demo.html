@@ -21,13 +21,22 @@
     // show-hide banners handler;
     var banner1 = document.querySelector('.banner1');
     var banner2 = document.querySelector('.banner2');
+    var windowWidth = window.innerWidth;
     document.addEventListener('click', function (evt) {
       if (evt.target.classList.contains('show-banner-1')) {
         if (!banner1.classList.contains('setHeightBannerAtlant1')) {
           banner1.contentWindow.document.location.reload();
-          setTimeout(function () {
-            banner1.classList.add('setHeightBannerAtlant1');
-          }, 500);
+          if (windowWidth < 992 ) {
+            banner1.src = '../stub.html';
+            setTimeout(function () {
+              banner1.classList.add('setHeightBannerAtlant1');
+              banner1.style.height = '100px';
+            }, 500);
+          } else {
+            setTimeout(function () {
+              banner1.classList.add('setHeightBannerAtlant1');
+            }, 500);
+          };
         } else {
           banner1.classList.remove('setHeightBannerAtlant1');
         }
